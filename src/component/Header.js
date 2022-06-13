@@ -14,6 +14,15 @@ const Header = () => (
           textDecoration: isActive ? 'underline' : 'none',
         })}
         className="nav__link"
+        to="/rockets"
+      >
+        Rockets
+      </NavLink>
+      <NavLink
+        style={({ isActive }) => ({
+          textDecoration: isActive ? 'underline' : 'none',
+        })}
+        className="nav__link"
         to="/missions"
       >
         Missions
