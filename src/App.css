@@ -25,6 +25,11 @@
   width: 40px;
 }
 
+.navlinks {
+  display: flex;
+  gap: 10px;
+}
+
 .nav__link:last-child::before {
   content: '';
   height: 80%;
