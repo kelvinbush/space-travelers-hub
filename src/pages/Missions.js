@@ -10,7 +10,6 @@ const Missions = () => {
     if (missions.length === 0) {
       dispatch(fetchMissions());
     }
-    console.log('Missions: ', missions);
   }, []);
   return (
     <div />
