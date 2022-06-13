@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-const Missions = () => (
-  <div />
-);
+const Missions = () => {
+  useEffect(() => {
+    console.log('Missions');
+  }, []);
+  return (
+    <div />
+  );
+};
 
 export default Missions;
