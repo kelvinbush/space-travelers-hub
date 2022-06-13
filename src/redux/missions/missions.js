@@ -10,6 +10,7 @@ const fetchMissionAction = (mission) => ({
   type: FETCH_MISSIONS,
   payload: mission,
 });
+
 export const fetchMissions = () => async (dispatch) => {
   const response = await axios.get(baseUrl);
   dispatch(fetchMissionAction(response.data));
