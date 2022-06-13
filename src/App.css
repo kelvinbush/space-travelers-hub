@@ -18,8 +18,16 @@
 .logo {
   display: flex;
   gap: 10px;
+  text-decoration: none;
 }
 
 .logoImage {
   width: 40px;
+}
+
+.nav__link:last-child::before {
+  content: '';
+  height: 80%;
+  border: 1px solid grey;
+  margin: 0 10px;
 }
