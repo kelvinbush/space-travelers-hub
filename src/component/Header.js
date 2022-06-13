@@ -4,11 +4,20 @@ import logo from '../assets/logo.png';
 
 const Header = () => (
   <header className="navbar">
-    <div className="logo">
+    <NavLink className="logo" to="/">
       <img src={logo} className="logoImage" alt="spacehub logo" />
       <h1 className="logoText">Space Travellers&apos; Hub</h1>
-    </div>
+    </NavLink>
     <nav>
+      <NavLink
+        style={({ isActive }) => ({
+          textDecoration: isActive ? 'underline' : 'none',
+        })}
+        className="nav__link"
+        to="/missions"
+      >
+        Missions
+      </NavLink>
       <NavLink
         style={({ isActive }) => ({
           textDecoration: isActive ? 'underline' : 'none',
