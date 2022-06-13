@@ -14,7 +14,7 @@ const Header = () => (
           textDecoration: isActive ? 'underline' : 'none',
         })}
         className="nav__link"
-        to="/rockets"
+        to="/"
       >
         Rockets
       </NavLink>
