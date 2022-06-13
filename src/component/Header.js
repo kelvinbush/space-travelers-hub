@@ -8,7 +8,16 @@ const Header = () => (
       <img src={logo} className="logoImage" alt="spacehub logo" />
       <h1 className="logoText">Space Travellers&apos; Hub</h1>
     </NavLink>
-    <nav>
+    <nav className="navlinks">
+      <NavLink
+        style={({ isActive }) => ({
+          textDecoration: isActive ? 'underline' : 'none',
+        })}
+        className="nav__link"
+        to="/rockets"
+      >
+        Rockets
+      </NavLink>
       <NavLink
         style={({ isActive }) => ({
           textDecoration: isActive ? 'underline' : 'none',
