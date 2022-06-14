@@ -37,14 +37,18 @@ const Missions = () => {
               <td className={styles.missions__name}>{mission.mission_name}</td>
               <td>{mission.description}</td>
               <td className={`${styles.missions__status} ${mission.reserved ? styles.missions__st_active : ''}`}>
-                <p>{mission.reserved ? 'Active Member' : 'NOT A MEMBER'}</p>
+                <p className={`${styles.missions__status} ${mission.reserved ? styles.missions__st_active : ''}`}>
+                  {mission.reserved && 'Active Member'}
+                  {!mission.reserved && 'NOT A MEMBER'}
+                </p>
               </td>
               <td className={`${styles.missions__actions} ${mission.reserved ? styles.missions__actions_active : ''}`}>
                 <button
                   onClick={() => toggleReservation(mission)}
                   type="button"
                 >
-                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+                  {mission.reserved && 'Leave Mission'}
+                  {!mission.reserved && 'Join Mission'}
                 </button>
               </td>
             </tr>
