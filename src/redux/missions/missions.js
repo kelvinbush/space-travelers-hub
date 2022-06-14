@@ -8,7 +8,7 @@ const LEAVE_MISSION = 'missionstore/missions/LEAVE_MISSION';
 
 const initialState = [];
 
-const fetchMissionAction = (mission) => ({
+export const fetchMissionAction = (mission) => ({
   type: FETCH_MISSIONS,
   payload: mission,
 });
