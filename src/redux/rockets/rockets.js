@@ -11,9 +11,15 @@ const fetchRocketsAction = (rockets) => ({
   payload: rockets,
 });
 
-export const fetchMissions = () => async (dispatch) => {
+export const fetchRockets = () => async (dispatch) => {
   const response = await axios.get(baseUrl);
-  dispatch(fetchRocketsAction(response.data));
+  const newResponse = response.data.map((res) => [
+    res.rocket_id,
+    res.rocket_name,
+    res.rocket_type,
+    res.flickr_images,
+  ]);
+  dispatch(fetchRocketsAction(newResponse));
 };
 
 export default (state = initialState, action) => {
