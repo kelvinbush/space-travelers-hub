@@ -8,30 +8,28 @@ import { bookRocket, cancelBookRocket } from '../redux/rockets/rockets';
 const RocketItem = (props) => {
   const dispatch = useDispatch();
 
-  const {
-    id, name, description, image,
-  } = props;
+  const { id, name, description, image, reserved } = props;
   return (
     <div className={styles.rocketContainer}>
       <img src={image} alt={name} className={styles.rocketImage} />
       <div className={styles.rocketDetailsContainer}>
         <header className="rocketName">{name}</header>
         <p className="rocketDescription">{description}</p>
-        {id ? (
-          <button
-            type="button"
-            className={styles.rocketRsvBtn}
-            onClick={() => dispatch(bookRocket(id))}
-          >
-            Reserve Rocket
-          </button>
-        ) : (
+        {reserved ? (
           <button
             type="button"
             className={styles.rocketCancelRsvBtn}
             onClick={() => dispatch(cancelBookRocket(id))}
           >
             Cancel Reservation
+          </button>
+        ) : (
+          <button
+            type="button"
+            className={styles.rocketRsvBtn}
+            onClick={() => dispatch(bookRocket(id))}
+          >
+            Reserve Rocket
           </button>
         )}
       </div>
@@ -44,6 +42,7 @@ RocketItem.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
 
 export default RocketItem;
