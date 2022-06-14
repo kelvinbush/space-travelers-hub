@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import styles from './styles/rocketItem.module.css';
 
 const RocketItem = (props) => {
-  const { id, name, description, image } = props;
+  const {
+    id, name, description, image,
+  } = props;
   return (
     <div className={styles.rocketContainer}>
       <img src={image} alt={name} className={styles.rocketImage} />
