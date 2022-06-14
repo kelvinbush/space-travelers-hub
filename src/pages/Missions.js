@@ -11,8 +11,31 @@ const Missions = () => {
       dispatch(fetchMissions());
     }
   }, []);
+
+  const tableHeaders = ['Mission', 'Description', 'Status', 'Action'];
+
   return (
-    <div />
+    <section>
+      <table>
+        <thead>
+          <tr>
+            {tableHeaders.map((header) => <th key={header}>{header}</th>)}
+          </tr>
+        </thead>
+        <tbody>
+          {missions.map((mission) => (
+            <tr key={mission.id}>
+              <td>{mission.mission_name}</td>
+              <td>{mission.description}</td>
+              <td>{mission.status}</td>
+              <td>
+                <button type="button">View</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
   );
 };
 
