@@ -1,4 +1,4 @@
-import reducer, { bookRocket, cancelBookRocket, fetchRockets } from '../rockets/rockets';
+import reducer, { bookRocket, cancelBookRocket } from '../rockets/rockets';
 
 describe('Testing rockets store', () => {
   it('should return the initial state', () => {
