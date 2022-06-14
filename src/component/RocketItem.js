@@ -8,7 +8,9 @@ import { bookRocket, cancelBookRocket } from '../redux/rockets/rockets';
 const RocketItem = (props) => {
   const dispatch = useDispatch();
 
-  const { id, name, description, image, reserved } = props;
+  const {
+    id, name, description, image, reserved,
+  } = props;
   return (
     <div className={styles.rocketContainer}>
       <img src={image} alt={name} className={styles.rocketImage} />
