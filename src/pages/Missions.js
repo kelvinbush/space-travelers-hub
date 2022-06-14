@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions } from '../redux/missions/missions';
+import { fetchMissions, joinMissionAction, leaveMissionAction } from '../redux/missions/missions';
 import styles from './Missions.module.scss';
 
 const Missions = () => {
@@ -12,6 +12,13 @@ const Missions = () => {
       dispatch(fetchMissions());
     }
   }, []);
+
+  const toggleReservation = (mission) => {
+    if (mission.reserved) {
+      return dispatch(leaveMissionAction(mission.mission_id));
+    }
+    return dispatch(joinMissionAction(mission.mission_id));
+  };
 
   const tableHeaders = ['Mission', 'Description', 'Status', 'Action'];
 
@@ -33,7 +40,12 @@ const Missions = () => {
                 <p>{mission.reserved ? 'Active Member' : 'NOT A MEMBER'}</p>
               </td>
               <td className={`${styles.missions__actions} ${mission.reserved ? styles.missions__actions_active : ''}`}>
-                <button type="button">{mission.reserved ? 'Leave Mission' : 'Join Mission'}</button>
+                <button
+                  onClick={() => toggleReservation(mission)}
+                  type="button"
+                >
+                  {mission.reserved ? 'Leave Mission' : 'Join Mission'}
+                </button>
               </td>
             </tr>
           ))}
