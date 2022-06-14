@@ -6,14 +6,22 @@ import { fetchRockets } from '../redux/rockets/rockets';
 const Rockets = () => {
   const rockets = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
-  console.log(rockets);
+
   useEffect(() => {
-    dispatch(fetchRockets());
+    if (rockets.length === 0) {
+      dispatch(fetchRockets());
+    }
   }, []);
   return (
     <ul>
       {rockets.map((rocket) => (
-        <RocketItem name={rocket.name} key={rocket.id} image={rocket.im/>
+        <RocketItem
+          name={rocket.rocketname}
+          key={rocket.id}
+          image={rocket.image}
+          description={rocket.description}
+          type={rocket.type}
+        />
       ))}
     </ul>
   );
