@@ -36,3 +36,8 @@
   border: 1px solid grey;
   margin: 0 10px;
 }
+
+.rocketsPage {
+  max-width: 1200px;
+  margin: 0 auto;
+}

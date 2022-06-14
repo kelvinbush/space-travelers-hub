@@ -13,17 +13,21 @@ const Rockets = () => {
     }
   }, []);
   return (
-    <ul>
-      {rockets.map((rocket) => (
-        <RocketItem
-          name={rocket.rocketname}
-          key={rocket.id}
-          image={rocket.image}
-          description={rocket.description}
-          type={rocket.type}
-        />
-      ))}
-    </ul>
+    <section className="rocketsPage">
+      <hr />
+      <ul>
+        {rockets.map((rocket) => (
+          <RocketItem
+            name={rocket.rocketname}
+            key={rocket.id}
+            image={rocket.image}
+            description={rocket.description}
+            type={rocket.type}
+            id={rocket.id}
+          />
+        ))}
+      </ul>
+    </section>
   );
 };
 

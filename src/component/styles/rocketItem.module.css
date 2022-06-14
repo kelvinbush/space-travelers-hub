@@ -1,0 +1,34 @@
+.rocketContainer {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px 0;
+}
+
+.rocketImage {
+  width: 250px;
+}
+
+.rocketDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.rocketRsvBtn {
+  width: 130px;
+  padding: 5px 10px;
+  background: rgb(79, 106, 180);
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
+.rocketCancelRsvBtn {
+  width: 140px;
+  padding: 5px 10px;
+  color: rgb(98, 96, 96);
+  background-color: transparent;
+  border: 1px solid rgb(98, 96, 96);
+  border-radius: 5px;
+}
