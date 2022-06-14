@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+
 import styles from './styles/rocketItem.module.css';
+import { bookRocket } from '../redux/rockets/rockets';
 
 const RocketItem = (props) => {
-  const {
-    id, name, description, image,
-  } = props;
+  const dispatch = useDispatch();
+
+  const { id, name, description, image } = props;
   return (
     <div className={styles.rocketContainer}>
       <img src={image} alt={name} className={styles.rocketImage} />
@@ -13,7 +16,11 @@ const RocketItem = (props) => {
         <header className="rocketName">{name}</header>
         <p className="rocketDescription">{description}</p>
         {id ? (
-          <button type="button" className={styles.rocketRsvBtn}>
+          <button
+            type="button"
+            className={styles.rocketRsvBtn}
+            onClick={() => dispatch(bookRocket(id))}
+          >
             Reserve Rocket
           </button>
         ) : (
