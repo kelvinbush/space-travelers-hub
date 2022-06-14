@@ -1,0 +1,96 @@
+.missions {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  table {
+    margin-top: 30px;
+    width: 100%;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+
+  thead {
+    font-weight: bold;
+    background-color: #ccc;
+  }
+
+  thead th {
+    padding: 10px;
+  }
+
+  thead th:first-child {
+    width: 10%;
+  }
+
+  thead th:nth-child(2) {
+    width: 66%;
+  }
+
+  thead th:nth-child(3) {
+    width: 12%;
+  }
+
+  thead th:nth-child(4) {
+    width: 12%;
+  }
+
+  tbody {
+    tr {
+      td {
+        padding: 10px;
+      }
+    }
+  }
+
+
+  &__name {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+  }
+
+  &__description {
+
+  }
+
+  &__status {
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.7rem;
+    color: white;
+
+    p {
+      background-color: rgb(98, 96, 96);
+      padding: 4px;
+      border-radius: 5px;
+    }
+  }
+
+  &__st_active {
+    p {
+      background-color: dodgerblue;
+    }
+  }
+
+  &__actions {
+    text-align: center;
+    font-weight: 500;
+
+    button {
+      cursor: pointer;
+      padding: 5px;
+      border-radius: 2px;
+      border: 1px solid rgb(98, 96, 96);
+      background-color: transparent;
+      color: rgb(98, 96, 96);
+    }
+  }
+
+  &__actions_active {
+    button {
+      border: 1px solid red;
+      color: red;
+    }
+  }
+
+}
