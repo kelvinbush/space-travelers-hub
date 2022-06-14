@@ -13,12 +13,13 @@ const fetchRocketsAction = (rockets) => ({
 
 export const fetchRockets = () => async (dispatch) => {
   const response = await axios.get(baseUrl);
-  const newResponse = response.data.map((res) => [
-    res.rocket_id,
-    res.rocket_name,
-    res.rocket_type,
-    res.flickr_images,
-  ]);
+  const newResponse = response.data.map((res) => ({
+    id: res.rocket_id,
+    rocketname: res.rocket_name,
+    type: res.rocket_type,
+    image: res.flickr_images[0],
+    description: res.description,
+  }));
   dispatch(fetchRocketsAction(newResponse));
 };
 
