@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
 import styles from './styles/rocketItem.module.css';
-import { bookRocket } from '../redux/rockets/rockets';
+import { bookRocket, cancelBookRocket } from '../redux/rockets/rockets';
 
 const RocketItem = (props) => {
   const dispatch = useDispatch();
@@ -24,7 +24,11 @@ const RocketItem = (props) => {
             Reserve Rocket
           </button>
         ) : (
-          <button type="button" className={styles.rocketCancelRsvBtn}>
+          <button
+            type="button"
+            className={styles.rocketCancelRsvBtn}
+            onClick={() => dispatch(cancelBookRocket(id))}
+          >
             Cancel Reservation
           </button>
         )}
