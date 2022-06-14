@@ -12,6 +12,7 @@ const Rockets = () => {
       dispatch(fetchRockets());
     }
   }, []);
+
   return (
     <section className="rocketsPage">
       <hr />
