@@ -5,8 +5,9 @@
   table {
     margin-top: 30px;
     width: 100%;
-    border: 1px solid #ccc;
     text-align: left;
+    border-collapse: collapse;
+    margin-bottom: 50px;
   }
 
   thead {
@@ -42,15 +43,8 @@
     }
   }
 
-
   &__name {
-    display: flex;
-    justify-content: flex-start;
     font-weight: bold;
-  }
-
-  &__description {
-
   }
 
   &__status {
@@ -92,5 +86,4 @@
       color: red;
     }
   }
-
 }

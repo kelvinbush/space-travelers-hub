@@ -18,7 +18,7 @@ const Missions = () => {
   return (
     <section className={styles.missions}>
       <hr />
-      <table>
+      <table border={1} cellSpacing={0}>
         <thead>
           <tr>
             {tableHeaders.map((header) => <th key={header}>{header}</th>)}
@@ -28,7 +28,7 @@ const Missions = () => {
           {missions.map((mission) => (
             <tr key={mission.mission_id}>
               <td className={styles.missions__name}>{mission.mission_name}</td>
-              <td className={styles.missions__description}>{mission.description}</td>
+              <td>{mission.description}</td>
               <td className={`${styles.missions__status} ${mission.reserved ? styles.missions__st_active : ''}`}>
                 <p>{mission.reserved ? 'Active Member' : 'NOT A MEMBER'}</p>
               </td>
