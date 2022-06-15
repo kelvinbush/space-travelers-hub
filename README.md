@@ -1,14 +1,19 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e0f14414-e46b-4264-85f4-02a55abbb7e4/deploy-status)](https://app.netlify.com/sites/remarkable-cupcake-36a101/deploys)
 
-# space Traveler's Hub
+# Space Traveler's Hub
 
-> This is a space traveler's hub. It is a place where you can find out about the universe and its inhabitants.
+ This is a React app consuming the [SpaceX API](https://api.spacexdata.com/v3/).
+ Displaying the available rockets and missions.
+ Users can reserve rockets and missions.
 
 
 ## Built With
 
 - [React](https://reactjs.org/)
 - [Redux](https://redux.js.org/)
+- [React-Router](https://reactrouter.com/)
+- [Sass](https://sass-lang.com/)
 
 ## Live Demo (Coming soon)
 
