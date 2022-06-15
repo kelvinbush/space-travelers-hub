@@ -33,7 +33,7 @@ const Missions = () => {
         </thead>
         <tbody>
           {missions.map((mission) => (
-            <tr key={mission.mission_id}>
+            <tr key={mission.mission_id} className={styles.missions__row}>
               <td className={styles.missions__name}>{mission.mission_name}</td>
               <td>{mission.description}</td>
               <td className={`${styles.missions__status} ${mission.reserved ? styles.missions__st_active : ''}`}>

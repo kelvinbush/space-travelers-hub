@@ -2,6 +2,10 @@
   max-width: 1200px;
   margin: 0 auto;
 
+  &__row:nth-child(odd) {
+    background-color: #f5f5f5;
+  }
+
   table {
     margin-top: 30px;
     width: 100%;
@@ -12,7 +16,6 @@
 
   thead {
     font-weight: bold;
-    background-color: #ccc;
   }
 
   thead th {
@@ -73,7 +76,7 @@
     button {
       cursor: pointer;
       padding: 5px;
-      border-radius: 2px;
+      border-radius: 4px;
       border: 1px solid rgb(98, 96, 96);
       background-color: transparent;
       color: rgb(98, 96, 96);

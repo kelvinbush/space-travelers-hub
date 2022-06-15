@@ -15,8 +15,11 @@ const RocketItem = (props) => {
     <div className={styles.rocketContainer}>
       <img src={image} alt={name} className={styles.rocketImage} />
       <div className={styles.rocketDetailsContainer}>
-        <header className="rocketName">{name}</header>
-        <p className="rocketDescription">{description}</p>
+        <header className={styles.rocketName}>{name}</header>
+        <p className="rocketDescription">
+          {reserved && <span className={styles.rocketRsvSpan}>Reserved</span>}
+          {description}
+        </p>
         {reserved ? (
           <button
             type="button"

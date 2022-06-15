@@ -1,11 +1,12 @@
 .rocketContainer {
   display: flex;
   align-items: flex-start;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .rocketImage {
-  width: 250px;
+  flex-basis: 250px;
+  min-width: 250px;
 }
 
 .rocketDetailsContainer {
@@ -31,4 +32,18 @@
   background-color: transparent;
   border: 1px solid rgb(98, 96, 96);
   border-radius: 5px;
+}
+
+.rocketName {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.rocketRsvSpan {
+  font-size: 12px;
+  padding: 3px;
+  color: white;
+  background-color: teal;
+  border-radius: 5px;
+  margin-right: 5px;
 }
