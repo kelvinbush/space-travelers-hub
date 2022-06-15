@@ -15,9 +15,9 @@
 - [React-Router](https://reactrouter.com/)
 - [Sass](https://sass-lang.com/)
 
-## Live Demo (Coming soon)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://space-travels-app.netlify.app/)
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
