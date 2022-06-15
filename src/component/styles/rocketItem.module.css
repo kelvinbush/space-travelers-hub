@@ -1,0 +1,49 @@
+.rocketContainer {
+  display: flex;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.rocketImage {
+  flex-basis: 250px;
+  min-width: 250px;
+}
+
+.rocketDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.rocketRsvBtn {
+  width: 130px;
+  padding: 5px 10px;
+  background: rgb(79, 106, 180);
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
+.rocketCancelRsvBtn {
+  width: 140px;
+  padding: 5px 10px;
+  color: rgb(98, 96, 96);
+  background-color: transparent;
+  border: 1px solid rgb(98, 96, 96);
+  border-radius: 5px;
+}
+
+.rocketName {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.rocketRsvSpan {
+  font-size: 12px;
+  padding: 3px;
+  color: white;
+  background-color: teal;
+  border-radius: 5px;
+  margin-right: 5px;
+}
