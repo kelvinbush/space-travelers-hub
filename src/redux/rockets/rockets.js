@@ -31,7 +31,7 @@ export const bookRocket = (rocket) => ({
 });
 
 export const cancelBookRocket = (rocket) => ({
-  type: BOOK_ROCKET,
+  type: CANCEL_BOOK_ROCKET,
   payload: rocket,
 });
 

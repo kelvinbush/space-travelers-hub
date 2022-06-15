@@ -12,6 +12,7 @@ const Rockets = () => {
       dispatch(fetchRockets());
     }
   }, []);
+
   return (
     <section className="rocketsPage">
       <hr />
@@ -24,6 +25,7 @@ const Rockets = () => {
             description={rocket.description}
             type={rocket.type}
             id={rocket.id}
+            reserved={rocket.reserved}
           />
         ))}
       </ul>

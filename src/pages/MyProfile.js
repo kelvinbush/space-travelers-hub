@@ -4,7 +4,9 @@ import styles from './MyProfile.module.scss';
 
 const MyProfile = () => {
   const missions = useSelector((state) => state.missions);
+  const rockets = useSelector((state) => state.rockets);
   const reservedMissions = missions.filter((mission) => mission.reserved);
+  const reservedRockets = rockets.filter((rocket) => rocket.reserved);
 
   return (
     <>
@@ -22,7 +24,13 @@ const MyProfile = () => {
         </div>
         <div>
           <h2>My Rockets</h2>
-          <div className={styles.profile__card} />
+          <div className={styles.profile__card}>
+            {reservedRockets.map((rocket) => (
+              <div key={rocket.id}>
+                <p>{rocket.rocketname}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>
